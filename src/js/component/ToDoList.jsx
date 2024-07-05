@@ -23,7 +23,7 @@ export const TodoList = () => {
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
           <span htmlFor="randomInput" className="form-label">New Task</span>
-          <input type="text" className="form-control" id="exampleInput"
+          <input type="text" className="form-control" id="randomInput"
             value={task} onChange={(event) => setTask(event.target.value)} />
         </div>
       </form>
@@ -40,6 +40,7 @@ export const TodoList = () => {
       <div>
         <ul>
       <li className="list-group-item text-end">{todos.length} tasks</li>
+      <button className="btn btn-secondary" onClick={()=>deleteTask(task)}>Delete all</button>
         </ul>
       </div>
     </div>
